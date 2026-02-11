@@ -1,0 +1,51 @@
+{
+    "name": "sistem_atc/laravel-marketplaces",
+    "description": "SDK Laravel para comunicação padronizada com todos os marketsplaces implementados",
+    "keywords": ["marketplaces", "laravel", "sdk", "mercadolivre", "shoppe", "tiktokshop"],
+    "homepage": "https://github.com/sistem-atc/laravel-marketplaces",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kleber Pracidelli",
+            "email": "sistem.atc@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SistemAtc\\MarketPlaces\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SistemAtc\\MarketPlaces\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SistemAtc\\MarketPlaces\\MarketPlaceServiceProvider"
+            ],
+            "aliases": {
+                "Asaas": "SistemAtc\\MarketPlaces\\Facades\\MarketPlaces"
+            }
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+        "illuminate/http": "^10.0 || ^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.9",
+        "pestphp/pest": "^4.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    }
+}
